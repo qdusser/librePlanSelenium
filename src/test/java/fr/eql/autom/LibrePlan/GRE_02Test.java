@@ -100,6 +100,8 @@ public class GRE_02Test {
 	System.out.println("\n PT 2");
 	headerPage.ResourcesMachinesHeader();
 	Thread.sleep(1500);
+	if (getParameter("browser").equals("chrome")) {
+	assertEquals("rgba(255, 255, 255, 1)", wd.findElement(By.xpath("//button[@id='"+headerPage.prefixe()+"7-b']")).getCssValue("color"));
 	assertEquals("Machines List", wd.findElement(By.xpath("//div[@id='"+headerPage.prefixe()+"j4']/div[2]/div/div/div")).getText());
 	Assert.assertTrue(wd.findElement(By.xpath("//div[@id='"+headerPage.prefixe()+"p5']")).isDisplayed());
 	assertEquals("Name", wd.findElement(By.xpath("//div[@id='"+headerPage.prefixe()+"s5-cave']")).getText());
@@ -113,7 +115,7 @@ public class GRE_02Test {
 	Assert.assertTrue(wd.findElement(By.xpath("//td[@id='"+headerPage.prefixe()+"f5-cnt']")).isDisplayed());
 	Assert.assertTrue(wd.findElement(By.xpath("//table[@id='"+headerPage.prefixe()+"n5-box']/tbody/tr[2]/td[2]")).isDisplayed());
 	Assert.assertTrue(wd.findElement(By.xpath("//table[@id='"+headerPage.prefixe()+"x5-box']/tbody/tr[2]/td[2]")).isDisplayed());
-	
+	}
 	//Pas de test 3 Cr�er une machine - Acc�s au formulaire de cr�ation
 	System.out.println("\n PT 3");
 	machinesPage.creerMachines();
