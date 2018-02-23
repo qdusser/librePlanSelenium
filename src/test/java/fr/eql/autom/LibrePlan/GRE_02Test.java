@@ -64,7 +64,12 @@ public class GRE_02Test {
 			capability.setCapability("browserName", "firefox");
 			capability.setCapability("marionette", "true");	
 		}
-	else{
+	if(getParameter("browser").equals("internet explorer")){
+		capability.setBrowserName(getParameter("browser"));	
+		capability.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,
+				true);
+	}
+	if(getParameter("browser").equals("chrome")){
 		capability.setBrowserName(getParameter("browser"));	
 	}
 			wd = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capability);
