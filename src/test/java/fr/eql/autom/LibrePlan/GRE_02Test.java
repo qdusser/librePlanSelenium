@@ -60,7 +60,7 @@ public class GRE_02Test {
 	if(getParameter("browser").equals("firefox")) {
 			FirefoxProfile profile = new FirefoxProfile();
 			profile.setPreference("browser.tabs.remote.autostart",false);
-	    //    capability.setCapability(FirefoxDriver.PROFILE, profile);
+	        capability.setCapability(FirefoxDriver.PROFILE, profile);
 			capability.setCapability("browserName", "firefox");
 			capability.setCapability("marionette", "true");	
 		}
