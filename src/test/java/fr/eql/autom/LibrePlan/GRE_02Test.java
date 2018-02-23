@@ -101,7 +101,7 @@ public class GRE_02Test {
 	headerPage.ResourcesMachinesHeader();
 	Thread.sleep(1500);
 	if (getParameter("browser").equals("chrome")) {
-	assertEquals("rgba(255, 255, 255, 1)", wd.findElement(By.xpath("//button[@id='"+headerPage.prefixe()+"7-b']")).getCssValue("color"));
+	assertEquals("rgba(0, 87, 130, 1)", wd.findElement(By.xpath("//button[@id='"+headerPage.prefixe()+"7-b']")).getCssValue("color"));
 	assertEquals("Machines List", wd.findElement(By.xpath("//div[@id='"+headerPage.prefixe()+"j4']/div[2]/div/div/div")).getText());
 	Assert.assertTrue(wd.findElement(By.xpath("//div[@id='"+headerPage.prefixe()+"p5']")).isDisplayed());
 	assertEquals("Name", wd.findElement(By.xpath("//div[@id='"+headerPage.prefixe()+"s5-cave']")).getText());
