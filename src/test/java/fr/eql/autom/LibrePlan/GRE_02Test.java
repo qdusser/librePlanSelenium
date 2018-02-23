@@ -77,7 +77,7 @@ public class GRE_02Test {
 		wd = new ChromeDriver();*/
 			
 	//acc�s � l'url
-	wd.get("localhost:8082/libreplan");
+	wd.get("http://localhost:8082/libreplan");
 	wd.manage().window().maximize();
 	wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	LogPage pageConnexion = PageFactory.initElements(wd, LogPage.class);
