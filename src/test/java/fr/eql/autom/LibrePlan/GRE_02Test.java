@@ -55,16 +55,18 @@ public class GRE_02Test {
 	@Test //Test 04/GRE_01 Cr�er un participant - nouvel utilisateur
 	
 	public void test() throws Exception{ 
-		System.out.println("\n LANCEMENT TEST 2");
+		System.out.println("\n LANCEMENT TEST 1");
 		DesiredCapabilities capability = new DesiredCapabilities();
-		capability.setBrowserName(getParameter("browser"));	
-		if(getParameter("browser").equals("firefox")) {
+	if(getParameter("browser").equals("firefox")) {
 			FirefoxProfile profile = new FirefoxProfile();
 			profile.setPreference("browser.tabs.remote.autostart",false);
 	        capability.setCapability(FirefoxDriver.PROFILE, profile);
 			capability.setCapability("browserName", "firefox");
 			capability.setCapability("marionette", "true");	
 		}
+	else{
+		capability.setBrowserName(getParameter("browser"));	
+	}
 			wd = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capability);
 	/*System.setProperty("webdriver.chrome.driver", "C:\\Users\\Formation\\OWASP ZAP\\webdriver\\windows\\32\\chromedriver.exe");
 		wd = new ChromeDriver();*/
