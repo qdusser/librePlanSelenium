@@ -113,8 +113,8 @@ public class GRE_02Test {
 	Assert.assertTrue(wd.findElement(By.xpath("//input[@id='"+headerPage.prefixe()+"q4-real']")).isDisplayed());
 	Assert.assertTrue(wd.findElement(By.xpath("//input[@id='"+headerPage.prefixe()+"d5']")).isDisplayed());
 	Assert.assertTrue(wd.findElement(By.xpath("//td[@id='"+headerPage.prefixe()+"f5-cnt']")).isDisplayed());
-	Assert.assertTrue(wd.findElement(By.xpath("//table[@id='"+headerPage.prefixe()+"n5-box']/tbody/tr[2]/td[2]")).isDisplayed());
-	Assert.assertTrue(wd.findElement(By.xpath("//table[@id='"+headerPage.prefixe()+"x5-box']/tbody/tr[2]/td[2]")).isDisplayed());
+	//Assert.assertTrue(wd.findElement(By.xpath("//table[@id='"+headerPage.prefixe()+"n5-box']/tbody/tr[2]/td[2]")).isDisplayed());
+	//Assert.assertTrue(wd.findElement(By.xpath("//table[@id='"+headerPage.prefixe()+"x5-box']/tbody/tr[2]/td[2]")).isDisplayed());
 	}
 	//Pas de test 3 Cr�er une machine - Acc�s au formulaire de cr�ation
 	System.out.println("\n PT 3");
